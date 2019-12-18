@@ -8,10 +8,10 @@
     "eslint-plugin"
   ],
   "author": "Bryan R Smith <BryanRSmith@gmail.com>",
-  "homepage": "https://github.com/bryanrsmith/eslint-plugin-sort-class-members",
+  "homepage": "https://github.com/LordParsley/eslint-plugin-sort-class-members",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bryanrsmith/eslint-plugin-sort-class-members.git"
+    "url": "git://github.com/LordParsley/eslint-plugin-sort-class-members.git"
   },
   "main": "dist/index.js",
   "directories": {
