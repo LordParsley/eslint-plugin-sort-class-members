@@ -157,7 +157,7 @@ function determineNodeSeperator(first, second) {
 }
 
 function isTokenOnSameLine(left, right) {
-	return left.loc.end.line === right.loc.start.line;
+	return left.loc.range[1].line === right.loc.range[0].line;
 }
 
 function getMemberDescription(member, { groupAccessors }) {
@@ -256,11 +256,10 @@ function forEachPair(list, callback) {
 
 function areMembersInCorrectOrder(first, second) {
 	return first.acceptableSlots.some(a =>
-		second.acceptableSlots.some(
-			b =>
-				a.index === b.index && areSlotsAlphabeticallySorted(a, b)
-					? first.name.localeCompare(second.name) <= 0
-					: a.index <= b.index
+		second.acceptableSlots.some(b =>
+			a.index === b.index && areSlotsAlphabeticallySorted(a, b)
+				? first.name.localeCompare(second.name) <= 0
+				: a.index <= b.index
 		)
 	);
 }
